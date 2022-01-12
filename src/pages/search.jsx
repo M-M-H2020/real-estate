@@ -35,10 +35,10 @@ export default function search({ properties }) {
         Properties {router.query.purpose}
       </Text>
       <Flex flexWrap='wrap'>
-        {properties.map(property => (
+        {properties?.map(property => (
           <Property key={property.externalID} {...property} />
         ))}
-        {properties.length === 0 && (
+        {properties?.length === 0 && (
           <Flex
             justifyContent='center'
             alignItems='center'

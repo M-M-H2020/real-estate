@@ -6,24 +6,26 @@ import millify from 'millify'
 import { baseUrl, fetchApi } from '@utils/fetchApi'
 import ImageScrollbar from '@components/ImageScrollbar'
 
-function PropertyDetails({
-  propertyDetails: {
-    price,
-    rentFrequency,
-    rooms,
-    title,
-    baths,
-    area,
-    agency,
-    isVerified,
-    description,
-    type,
-    furnishingStatus,
-    purpose,
-    amenities,
-    photos,
-  },
-}) {
+function PropertyDetails(
+  {
+    propertyDetails: {
+      price,
+      rentFrequency,
+      rooms,
+      title,
+      baths,
+      area,
+      agency,
+      isVerified,
+      description,
+      type,
+      furnishingStatus,
+      purpose,
+      amenities,
+      photos,
+    },
+  } = null
+) {
   return (
     <Box maxWidth='1000px' margin='auto' p='4'>
       {photos && <ImageScrollbar data={photos} />}
